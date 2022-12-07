@@ -10,7 +10,7 @@ jobs:
     steps:
     # Запуск actions checkout — готового скрипта 
     # для клонирования репозитория
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python
       # Запуск actions setup-python — готового скрипта 
       # для развёртывания окружения Python
@@ -74,7 +74,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Выполняет pull образа с DockerHub ######
+            # Выполняет pull образа с DockerHub ######7###
             sudo docker pull sanekaekb/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
