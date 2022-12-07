@@ -74,7 +74,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Выполняет pull образа с DockerHub #####7#7#7##
+            # Выполняет pull образа с DockerHub ####7#7#7#7##
             sudo docker pull sanekaekb/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
